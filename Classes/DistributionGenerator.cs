@@ -24,8 +24,13 @@ namespace CSharpModelingLab1.Classes
         public void Generate(ListBox box, Chart chart, int count)
         {
             box.Items.Clear();
+            double x;
             for (int i = 0; i < count; i++)
-                box.Items.Add(generator.Next());
+            {
+                x = generator.Next();
+                box.Items.Add(x);
+                chart.Series[0].Points.Add(x);
+            }
         }
     }
 }

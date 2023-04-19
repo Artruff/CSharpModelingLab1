@@ -33,6 +33,15 @@ namespace CSharpModelingLab1
             Classes.RandomValueGenerator valueGenerator = new Classes.RandomValueGenerator(density, leftBoard, rightBoard);
             distributionGenerator = new Classes.DistributionGenerator(valueGenerator);
             distributionGenerator.Generate(NormalBox, NormalChart, count);
+
+            Classes.funcRandomVariables func = delegate (double x)
+            {
+                return 2d*x-1;
+            };
+            density = new Classes.FunctionDistribution(func);
+            valueGenerator = new Classes.RandomValueGenerator(density, leftBoard, rightBoard);
+            distributionGenerator = new Classes.DistributionGenerator(valueGenerator);
+            distributionGenerator.Generate(FunctionBox, FunctionChart, count);
         }
     }
 }

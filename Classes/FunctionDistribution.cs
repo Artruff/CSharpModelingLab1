@@ -11,10 +11,11 @@ namespace CSharpModelingLab1.Classes
     {
         private funcRandomVariables _Density;
         private funcRandomVariables _Distribution;
-        public FunctionDistribution(funcRandomVariables Density, funcRandomVariables Distribution)
+        public FunctionDistribution(funcRandomVariables Density, funcRandomVariables Distribution = null)
         {
             _Density = (funcRandomVariables)Density.Clone();
-            _Distribution = (funcRandomVariables)Distribution.Clone();
+            if(Distribution !=null)
+                _Distribution = (funcRandomVariables)Distribution.Clone();
         }
         public double Density(double x)
         {

@@ -148,6 +148,7 @@ namespace CSharpModelingLab1
             this.squarDeviationTextBox.Name = "squarDeviationTextBox";
             this.squarDeviationTextBox.Size = new System.Drawing.Size(186, 20);
             this.squarDeviationTextBox.TabIndex = 8;
+            this.squarDeviationTextBox.Text = "1";
             // 
             // expectationTextBox
             // 
@@ -155,6 +156,7 @@ namespace CSharpModelingLab1
             this.expectationTextBox.Name = "expectationTextBox";
             this.expectationTextBox.Size = new System.Drawing.Size(186, 20);
             this.expectationTextBox.TabIndex = 9;
+            this.expectationTextBox.Text = "0,5";
             // 
             // countTextBox
             // 
@@ -162,6 +164,7 @@ namespace CSharpModelingLab1
             this.countTextBox.Name = "countTextBox";
             this.countTextBox.Size = new System.Drawing.Size(186, 20);
             this.countTextBox.TabIndex = 10;
+            this.countTextBox.Text = "25";
             // 
             // leftBoardLabel
             // 
@@ -188,6 +191,7 @@ namespace CSharpModelingLab1
             this.LeftBoardTextBox.Name = "LeftBoardTextBox";
             this.LeftBoardTextBox.Size = new System.Drawing.Size(80, 20);
             this.LeftBoardTextBox.TabIndex = 13;
+            this.LeftBoardTextBox.Text = "0";
             // 
             // RightBoardTextBox
             // 
@@ -196,6 +200,7 @@ namespace CSharpModelingLab1
             this.RightBoardTextBox.Name = "RightBoardTextBox";
             this.RightBoardTextBox.Size = new System.Drawing.Size(86, 20);
             this.RightBoardTextBox.TabIndex = 14;
+            this.RightBoardTextBox.Text = "1";
             // 
             // Modeling
             // 
