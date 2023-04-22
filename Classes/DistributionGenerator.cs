@@ -24,12 +24,32 @@ namespace CSharpModelingLab1.Classes
         public void Generate(ListBox box, Chart chart, int count)
         {
             box.Items.Clear();
-            double x;
+            chart.Series[0].Points.Clear();
+            List<double> xs = new List<double>();
+            double x, minX, maxX, deltaX, tmpX;
             for (int i = 0; i < count; i++)
             {
                 x = generator.Next();
                 box.Items.Add(x);
-                chart.Series[0].Points.Add(x);
+                xs.Add(x);
+            }
+
+            xs.Sort();
+            minX = xs.Min();
+            maxX = xs.Max();
+
+            deltaX = (maxX - minX) / 10;
+            tmpX = minX + deltaX;
+            for(int i = 0, tmpCount = 0; i< count; i++)
+            {
+                x = Convert.ToDouble(box.Items[i]);
+                if (x>tmpX)
+                {
+                    chart.Series[0].Points.Add(tmpCount);
+                    tmpX += deltaX;
+                    tmpCount = 0;
+                }
+                tmpCount++;
             }
         }
     }

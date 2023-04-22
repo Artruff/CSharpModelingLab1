@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace CSharpModelingLab1.Classes
 {
-    delegate double funcRandomVariables(double x);
     class FunctionDistribution : Interfaces.IFunctionDistribution, Interfaces.IFunctionDensity
     {
         private funcRandomVariables _Density;

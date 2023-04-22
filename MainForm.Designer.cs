@@ -50,6 +50,9 @@ namespace CSharpModelingLab1
             this.rightBoardLabel = new System.Windows.Forms.Label();
             this.LeftBoardTextBox = new System.Windows.Forms.TextBox();
             this.RightBoardTextBox = new System.Windows.Forms.TextBox();
+            this.KolmogorovTextBox = new System.Windows.Forms.TextBox();
+            this.KolmogorovLabel = new System.Windows.Forms.Label();
+            this.CheckSelectionsButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NormalChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FunctionChart)).BeginInit();
             this.SuspendLayout();
@@ -202,11 +205,42 @@ namespace CSharpModelingLab1
             this.RightBoardTextBox.TabIndex = 14;
             this.RightBoardTextBox.Text = "1";
             // 
+            // KolmogorovTextBox
+            // 
+            this.KolmogorovTextBox.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.KolmogorovTextBox.Location = new System.Drawing.Point(342, 372);
+            this.KolmogorovTextBox.Name = "KolmogorovTextBox";
+            this.KolmogorovTextBox.Size = new System.Drawing.Size(86, 20);
+            this.KolmogorovTextBox.TabIndex = 17;
+            this.KolmogorovTextBox.Text = "1,358";
+            // 
+            // KolmogorovLabel
+            // 
+            this.KolmogorovLabel.AutoSize = true;
+            this.KolmogorovLabel.Location = new System.Drawing.Point(294, 355);
+            this.KolmogorovLabel.Name = "KolmogorovLabel";
+            this.KolmogorovLabel.Size = new System.Drawing.Size(182, 13);
+            this.KolmogorovLabel.TabIndex = 16;
+            this.KolmogorovLabel.Text = "Табличное значение Колмагорова";
+            // 
+            // CheckSelectionsButton
+            // 
+            this.CheckSelectionsButton.Location = new System.Drawing.Point(319, 398);
+            this.CheckSelectionsButton.Name = "CheckSelectionsButton";
+            this.CheckSelectionsButton.Size = new System.Drawing.Size(132, 23);
+            this.CheckSelectionsButton.TabIndex = 15;
+            this.CheckSelectionsButton.Text = "Проверить выборки";
+            this.CheckSelectionsButton.UseVisualStyleBackColor = true;
+            this.CheckSelectionsButton.Click += new System.EventHandler(this.CheckSelectionsButton_Click);
+            // 
             // Modeling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 433);
+            this.Controls.Add(this.KolmogorovTextBox);
+            this.Controls.Add(this.KolmogorovLabel);
+            this.Controls.Add(this.CheckSelectionsButton);
             this.Controls.Add(this.RightBoardTextBox);
             this.Controls.Add(this.LeftBoardTextBox);
             this.Controls.Add(this.rightBoardLabel);
@@ -248,6 +282,9 @@ namespace CSharpModelingLab1
         private System.Windows.Forms.Label rightBoardLabel;
         private System.Windows.Forms.TextBox LeftBoardTextBox;
         private System.Windows.Forms.TextBox RightBoardTextBox;
+        private System.Windows.Forms.TextBox KolmogorovTextBox;
+        private System.Windows.Forms.Label KolmogorovLabel;
+        private System.Windows.Forms.Button CheckSelectionsButton;
     }
 }
 

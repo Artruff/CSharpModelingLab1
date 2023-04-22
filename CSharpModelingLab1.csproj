@@ -49,8 +49,10 @@
   <ItemGroup>
     <Compile Include="Classes\DistributionGenerator.cs" />
     <Compile Include="Classes\FunctionDistribution.cs" />
+    <Compile Include="Classes\KolmagorovCriterion.cs" />
     <Compile Include="Classes\NormalDistribution.cs" />
     <Compile Include="Classes\RandomValueGenerator.cs" />
+    <Compile Include="Delegates\funcDelegate.cs" />
     <Compile Include="Interfaces\IFunctionDensity.cs" />
     <Compile Include="Interfaces\IFunctionDistribution.cs" />
     <Compile Include="MainForm.cs">
