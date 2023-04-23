@@ -52,15 +52,17 @@ namespace CSharpModelingLab1
         }
         private void CheckSelections()
         {
-            Classes.KolmagorovSmirnovCriterion kolmagorovCriterion = new Classes.KolmagorovSmirnovCriterion();
-            double lambda = Convert.ToDouble(KolmogorovTextBox.Text);
+            double criterion = Convert.ToDouble(SmirnovTextBox.Text);
             double[] xNormal = new double[NormalBox.Items.Count],
                 xFunc = new double[FunctionBox.Items.Count];
             for (int i = 0; i < NormalBox.Items.Count; i++)
                 xNormal[i] = Convert.ToDouble(NormalBox.Items[i]);
             for (int i = 0; i < FunctionBox.Items.Count; i++)
                 xFunc[i] = Convert.ToDouble(FunctionBox.Items[i]);
-            if (kolmagorovCriterion.CheckingAgreement(xNormal, densityNormal, lambda) && kolmagorovCriterion.CheckingAgreement(xFunc, densityFunc, lambda))
+
+            Classes.SmirnovCriterion smirnovCriterion = new Classes.SmirnovCriterion(xNormal, xFunc);
+
+            if (smirnovCriterion.CheckingAgreement(densityNormal, densityFunc, criterion))
                 MessageBox.Show("Выборки однородны");
             else
                 MessageBox.Show("Выборки не однородны");
