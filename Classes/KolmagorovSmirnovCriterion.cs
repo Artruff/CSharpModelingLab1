@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpModelingLab1.Classes
 {
-    class KolmagorovCriterion
+    class KolmagorovSmirnovCriterion
     {
 
         public bool CheckingAgreement(double[] randomValue, Interfaces.IFunctionDensity density, double theoreticLambda)

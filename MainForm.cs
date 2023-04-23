@@ -52,7 +52,7 @@ namespace CSharpModelingLab1
         }
         private void CheckSelections()
         {
-            Classes.KolmagorovCriterion kolmagorovCriterion = new Classes.KolmagorovCriterion();
+            Classes.KolmagorovSmirnovCriterion kolmagorovCriterion = new Classes.KolmagorovSmirnovCriterion();
             double lambda = Convert.ToDouble(KolmogorovTextBox.Text);
             double[] xNormal = new double[NormalBox.Items.Count],
                 xFunc = new double[FunctionBox.Items.Count];

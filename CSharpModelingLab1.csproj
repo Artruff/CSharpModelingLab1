@@ -49,7 +49,7 @@
   <ItemGroup>
     <Compile Include="Classes\DistributionGenerator.cs" />
     <Compile Include="Classes\FunctionDistribution.cs" />
-    <Compile Include="Classes\KolmagorovCriterion.cs" />
+    <Compile Include="Classes\KolmagorovSmirnovCriterion.cs" />
     <Compile Include="Classes\NormalDistribution.cs" />
     <Compile Include="Classes\RandomValueGenerator.cs" />
     <Compile Include="Delegates\funcDelegate.cs" />
